@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Lesson #06</title>
+        <style>
+            /* ID and class selectors (we've done before) */
+            #favorite {
+                background-color: yellow;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                margin-left: 10px;
+            }
+            .card {
+                border-color: blue;
+                border-width: 3px;
+                border-style: solid;
+            }
+
+            /*Attribute selectors */
+            input[type="password"] {
+                background-color: yellow;
+            }
+            input[name="name"] {
+                background-color: orange;
+            }
+            a[href="https://usc.edu"] {
+                background-color: pink;
+            }
+
+            /* psuedo-class selectors */
+            li:first-child {
+                color: red;
+            }
+            li:nth-child(3) {
+                color: green;
+            }
+            ul:first-child {
+                background-color: orange;
+            }
+            li:nth-child(even) {
+                background-color: skyblue;
+            }
+            /* When <a> is hovered, */
+            a:hover {
+                background-color: black;
+                color: yellow;
+                font-size: 40px;
+            }
+            /* When any <li> is hovered */
+            li:hover {
+                background-color: lavender;
+            }
+            /* When an element with .shopping-text class is hovered */
+            .shopping-text:hover {
+                background-color: pink;
+                border-color: red;
+                border-width: 1px;
+                border-style: solid;
+            }
+
+            /*Combinator selectors*/
+            /* Any <p> descendants inside #favorite will be selected */
+            #favorite p {
+                font-weight: bold;
+                color: green;
+            }
+            /* > only selects the direct children, no grand children or great-grand children */
+            #favorite > p {
+                background-color: orange;
+            }
+
+            /* Use + to select siblings right next to each other. Example: select the <ul> that is right next to <p> */
+            p + ul {
+                background-color: pink;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="favorite" class="card">
+            <p>My favorite things:</p>
+            <ul>
+                <li>Coffee ☕️</li>
+                <li>Coding 👩‍💻</li>
+                <li>Teaching 👩‍🏫</li>
+                <li>Harry Potter ⚡️</li>
+            </ul>
+            <div class="footer">
+                <p>- Nayeon Kim</p>
+            </div>
+
+        </div>
+        <div id="shopping" class="card">
+            <p class="shopping-text">Shopping List</p>
+            <ul>
+                <li>Eggs</li>
+                <li class="highlight">Milk</li>
+                <li class="apple">Apple Juice</li>
+                <li>Bread</li>
+            </ul>
+            Name: <input type="text" name="name">
+            Password: <input type="password">
+            <p><a href="https://usc.edu">A link</a></p>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
